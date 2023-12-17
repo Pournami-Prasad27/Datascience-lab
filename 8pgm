@@ -33,7 +33,7 @@ print("predicted output for [[5,5,4,4]]:",y_new)
 print("Naive bayes score:",gnb.score(X_test,y_test))
 
 
-linear
+LLINEAR
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import datasets,linear_model
@@ -85,7 +85,7 @@ plt.figure(figsize=(15, 15))
 plot_tree(clf, fontsize=10, filled=True, rounded=True, class_names=list(iris.target_names), feature_names=iris.feature_names)
 plt.show()
 
-MATPLOTLIB
+MATRIX
 
 import numpy as np
 a=np.array([1,2,3])
@@ -106,3 +106,68 @@ d=np.eye(2)
 print("a 2*2 identity matrix:",d)
 e=np.random.random((2,2))
 print("an array with andom values:",e)
+
+
+
+MATPLOTLIB
+import numpy as np
+import matplotlib.pyplot as plt
+x=np.arange(0,3*np.pi,0.1)
+y_sin=np.sin(x)
+y_cos=np.cos(x)
+plt.plot(x,y_sin)
+plt.plot(x,y_cos)
+plt.xlabel('x axis label')
+plt.ylabel('y axis label')
+plt.title('since and cosine')
+plt.legend(['since','cosine'])
+plt.show()
+
+
+
+ARRAY
+import numpy as np
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([6, 7, 8, 9, 10])
+result_add=arr1+arr2
+print("sum:",result_add)
+result_multy=arr1*arr2
+print("mul",result_multy)
+print("mean",np.mean(result_add))
+print("maxval",np.max(result_multy))
+
+
+
+DATASETS
+import pandas as pd
+
+# a. Create DataFrame
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Emma'],
+    'Age': [25, 30, 22, 35, 28],
+    'City': ['New York', 'San Francisco', 'Los Angeles', 'Chicago', 'Boston'],
+    'Salary': [60000, 80000, 55000, 70000, 75000],
+    'Department': ['HR', 'IT', 'Marketing', 'Finance', 'Sales']
+}
+
+df = pd.DataFrame(data)
+
+# b. Show top 5 rows
+print("Top 5 rows:")
+print(df.head())
+
+# c. Remove multiple columns at once
+columns_to_remove = ['City', 'Department']
+df = df.drop(columns=columns_to_remove)
+
+# d. Rename two columns using the 'rename' method
+column_rename_mapping = {
+    'Name': 'Full Name',
+    'Age': 'Years Old'
+}
+
+df = df.rename(columns=column_rename_mapping)
+
+# Display the modified DataFrame
+print("\nDataFrame after removing columns and renaming:")
+print(df)
